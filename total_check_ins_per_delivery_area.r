@@ -1,0 +1,6 @@
+library(RPostgreSQL)
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, host='localhost', port='5432', dbname='area_dum', user='area_dum', password='area_dum')
+out <- dbGetQuery(con, 'select section_id, count(*) from check_ins group by 1')
+histInfo <- hist(out[,'count'], breaks=20, xlab="Number of check-ins", ylab="Number of delivery areas", main="Distribution of check-ins per delivery areas")
+print(histInfo)

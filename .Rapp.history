@@ -1,0 +1,196 @@
+exit
+2*3
+x <- 2*3
+x
+x <- c(8,4,5,6,1)
+x
+mynames <- c("nekaj", "miro", "jadranko", "ismael")
+table(mynames)
+dataset = read.csv(file="/Users/pero/Desktop/AreaDUM - R Scripts/example_time_series.csv",head=TRUE,sep=",")
+dataset
+dataset = read.csv(file="/Users/pero/Desktop/AreaDUM - R Scripts/example_time_series.csv",head=TRUE,sep=";")
+dataset
+plot(tui[,5],type="l")
+plot(dataset[,5],type="l")
+plot(dataset[,4],type="l")
+plot(dataset$timestamp, dataset$total, type = "l")
+head(dataset)
+plot(dataset$time_slot_date, dataset$total, type = "l")
+plot(head(dataset)[,4],type="l")
+aggregate(dataset[,4], list(d$time_slot_date))
+aggregate(dataset[,4], list(d$time_slot_date), mean)
+aggregate(dataset[,4], list(dataset$time_slot_date), mean)
+head(dataset)
+aggregate(dataset[,4], list(dataset$time_slot_start,dataset$time_slot_end), mean)
+aggregate(dataset[,4], list(dataset$time_slot_start,dataset$time_slot_end), st)
+aggregate(dataset[,4], list(dataset$time_slot_start,dataset$time_slot_end), sd)
+source("/Users/pero/Desktop/total_check_ins_per_day.r")
+source("/Users/pero/Desktop/total_check_ins_per_deliverer.r")
+source("/Users/pero/Desktop/total_check_ins_per_delivery_area.r")
+source("/Users/pero/Desktop/total_check_ins_per_day.r")
+source("/Users/pero/Desktop/total_check_ins_per_delivery_area.r")
+density(out[,'count'])
+source("/Users/pero/Desktop/total_check_ins_per_deliverer.r")
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+hist(.leap.seconds,#
+     seq(ISOdate(1970, 1, 1), ISOdate(2020, 1, 1), "5 years"))
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+qplot(checkInTimeSeries$timeSlot, checkInTimeSeries$occurrences)
+qplot(0:15, 5:20)
+qplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences)
+qplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences, type="l")
+qplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences)
+ggplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences)
+qplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences)
+qplot(checkInsPerTimeSlot$timeSlot, checkInsPerTimeSlot$occurrences, main="Distribution of Gas Milage", xlab="Miles Per Gallon",#
+   ylab="Density")
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+ggplot(checkInStatsPerTimeSlot, aes(x=tmpTimeSlots, y=mean, colour=tmpTimeSlots, group=tmpTimeSlots)) + #
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se), colour="black", width=.1, position=pd) +#
+    geom_line(position=pd) +#
+    geom_point(position=pd, size=3)
+pd <- position_dodge(0.1)
+ggplot(checkInStatsPerTimeSlot, aes(x=tmpTimeSlots, y=mean, colour=tmpTimeSlots, group=tmpTimeSlots)) + #
+    geom_errorbar(aes(ymin=mean-se, ymax=mean+se), colour="black", width=.1, position=pd) +#
+    geom_line(position=pd) +#
+    geom_point(position=pd, size=3)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+sapply(checkInTimeSeries, class)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+clear
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+source("/Users/pero/Desktop/total_check_ins_per_day.r")
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+source("/Users/pero/Desktop/total_check_ins_per_day.r")
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+checkInTimeSeriesNonWork <- data.frame(table(cut(queryResponseNonWork$timestamp, breaks = seq(startDatetime, endDatetime, as.difftime(timeSlotSize, units="mins")))))
+checkInTimeSeries <- data.frame(table(cut(queryResponse$timestamp, breaks = seq(startDatetime, endDatetime, as.difftime(timeSlotSize, units="mins")))))
+queryResponseNonWork
+queryResponse
+queryResponseNonWork <- dbGetQuery(con, statement = paste('SELECT timestamp AS timestamps',#
+										 	   		      'FROM check_ins',#
+										 		          'WHERE section_id = ', sectionId,#
+										 	              'AND timestamp >= \'', startDatetime, '\'',#
+										 		          'AND timestamp <= \'', endDatetime, '\'',#
+										 		          'AND extract(dow from timestamp) IN (0,6)',#
+										 		          'AND is_holiday = TRUE',#
+										 		          'ORDER BY timestamp'))
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+queryResponse
+queryResponseNonWork
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+queryResponseNonWork
+queryResponse
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+checkInTimeSeriesWork
+checkInTimeSeriesNonWork
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+checkInTimeSeriesNonWork$timeSlot
+checkInTimeSeriesNonWork$occurences
+checkInTimeSeriesWork$occurrences
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+checkInTimeSeriesWork$occurrences
+checkInTimeSeriesWork$timeSlot
+checkInTimeSeriesWork
+checkInTimeSeriesWork$timeSlot
+checkInTimeSeriesWork[,timeSlot]
+checkInTimeSeriesWork[,'timeSlot']
+checkInTimeSeriesWork['timeSlot']
+checkInTimeSeriesWork['timeSlot',]
+queryResponse
+head(checkInTimeSeriesWork)
+colnames(checkInTimeSeries) <- c("timeSlot", "occurrences")
+head(checkInTimeSeriesWork)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+head(timeSeries)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+head(timeSeries)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+head(totalPerTimeSlot)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+install.packages("caret", dependencies = c("Depends", "Imports", "Suggests"))
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+install.packages('ggplot2', dep = TRUE)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+df <- read.table(text = "       Input Rtime Rcost Rsolutions  Btime Bcost #
+1   12-proc.     1    36     614425     40    36 #
+2   15-proc.     1    51     534037     50    51 #
+3    18-proc     5    62    1843820     66    66 #
+4    20-proc     4    68    1645581 104400    73 #
+5 20-proc(l)     4    64    1658509  14400    65 #
+6    21-proc    10    78    3923623 453600    82",header = TRUE,sep = "")
+df
+;
+dfm <- melt(df[,c('Input','Rtime','Btime')],id.vars = 1)
+library(reshape2)
+dfm <- melt(df[,c('Input','Rtime','Btime')],id.vars = 1)
+frm
+dfm
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+df <- read.table(text = "       Input Rtime Rcost Rsolutions  Btime Bcost #
+1   12-proc.     1    36     614425     40    36 #
+2   15-proc.     1    51     534037     50    51 #
+3    18-proc     5    62    1843820     66    66 #
+4    20-proc     4    68    1645581 104400    73 #
+5 20-proc(l)     4    64    1658509  14400    65 #
+6    21-proc    10    78    3923623 453600    82",header = TRUE,sep = "")#
+#
+dfm <- melt(df[,c('Input','Rtime','Btime')],id.vars = 1)#
+#
+ggplot(dfm,aes(x = Input,y = value)) + #
+    geom_bar(aes(fill = variable),position = "dodge") + #
+    scale_y_log10()
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+head(statsPerTimeSlot)
+test <- melt(statsPerTimeSlot[,c('timeSlot', 'workDayOcc', 'nonWorkDayOcc')],id.vars = 1)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+timeSeriesWork <- data.frame(timeSlot = seq(startDatetime, endDatetime, as.difftime(timeSlotSize, units="mins")), occurrences=0 )
+head(timeSeriesWork)
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+timeSeriesWork
+timeSeriesSat
+timeSeriesSun
+timeSeriesSat
+timeSeriesSun
+source("/Users/pero/Desktop/total_check_ins_per_time_slot.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+rm(list=ls())
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+getwd()
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+source("/Users/pero/Development/area-dum-data-mining-scripts/hotspot_detection.r")
+df < read.table("./CSV_data_exports/test.csv", header=TRUE, sep=",")
+df < read.table("./CSV_data_exports/test.csv", header=TRUE, sep=",")
+df < read.table("./CSV_data_exports/test.csv", header=TRUE, sep=",")
